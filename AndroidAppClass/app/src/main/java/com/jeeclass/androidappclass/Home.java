@@ -1,6 +1,9 @@
 package com.jeeclass.androidappclass;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +26,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Home extends AppCompatActivity {
+
+    private ImageView notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Slide>> call, Throwable t) {
 
+            }
+        });
+
+        notification = findViewById(R.id.notification);
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Notification.class);
+                startActivity(intent);
             }
         });
     }
