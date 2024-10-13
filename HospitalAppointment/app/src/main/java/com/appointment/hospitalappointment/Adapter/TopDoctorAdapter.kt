@@ -1,9 +1,12 @@
 package com.appointment.hospitalappointment.Adapter
 
 import android.content.Context
+import android.content.Intent
+import android.icu.text.Transliterator.Position
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.appointment.hospitalappointment.Activity.DetailActivity
 import com.appointment.hospitalappointment.Domain.DoctorsModel
 import com.appointment.hospitalappointment.databinding.ViewholderTopDoctorBinding
 import com.bumptech.glide.Glide
@@ -37,6 +40,12 @@ class TopDoctorAdapter(val items:MutableList<DoctorsModel>):
             .load(item.Picture)
             .apply { RequestOptions().transform(CenterCrop()) }
             .into(holder.binding.imgDoctor)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra("object", items[position])
+            context?.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = items.size
