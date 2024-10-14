@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
@@ -14,8 +15,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.travel.travelguide.R;
+import com.travel.travelguide.adapter.CategoryAdapter;
 import com.travel.travelguide.adapter.SliderAdapter;
 import com.travel.travelguide.databinding.ActivityMainBinding;
+import com.travel.travelguide.domain.Category;
 import com.travel.travelguide.domain.Location;
 import com.travel.travelguide.domain.SliderItems;
 
@@ -34,6 +37,36 @@ public class MainActivity extends BaseActivity {
 
         initLocation();
         initBanner();
+        initCategory();
+    }
+
+    private void initCategory() {
+        DatabaseReference myReference = firebaseDatabase.getReference("Category");
+        binding.progressBarCategory.setVisibility(View.VISIBLE);
+        ArrayList<Category> list = new ArrayList<>();
+
+        myReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        list.add(dataSnapshot.getValue(Category.class));
+                    }
+
+                    if (!list.isEmpty()){
+                        binding.recyclerViewCategory.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false));
+                        RecyclerView.Adapter adapter = new CategoryAdapter(list);
+                        binding.recyclerViewCategory.setAdapter(adapter);
+                    }
+                    binding.progressBarCategory.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void initLocation() {
