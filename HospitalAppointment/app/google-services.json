@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "596420105640",
+    "project_id": "hospital-appointment-59",
+    "storage_bucket": "hospital-appointment-59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596420105640:android:40b60bfa342dd48aabb99d",
+        "android_client_info": {
+          "package_name": "com.appointment.hospitalappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW5ZM0D4Vl4EHmhFbp9cm8UE-gcxRrqFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Appointment</string>
+    <string name="personalized_care_n_right_where_you_need_it">Personalized Care,\nRight Where You Need It</string>
+    <string name="make_an_appointment">Make an Appointment</string>
+</resources>
