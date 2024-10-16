@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="14dp"
+    android:background="#A8F0FA"
+    android:paddingVertical="5dp"
+    android:layout_marginBottom="4dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:background="#D6DDFD"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="18dp">
+
+        <TextView
+            android:id="@+id/txtResturantNameInFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resturant Name"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgRatingInFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Rating"
+            android:src="@drawable/ic_rating_star"
+            app:layout_constraintBottom_toTopOf="@+id/imgFavourateonInFav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imgFavourateoff"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:contentDescription="Favourate off"-->
+        <!--            android:src="@drawable/ic_favourate_off"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/imgFavourateon"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/imgFavourateon" />-->
+
+        <ImageView
+            android:id="@+id/imgFavourateonInFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Favourate on"
+            android:src="@drawable/ic_favourate_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgRatingInFav" />
+
+        <TextView
+            android:id="@+id/txtRatingInFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:paddingEnd="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgRatingInFav"
+            app:layout_constraintEnd_toStartOf="@+id/imgRatingInFav"
+            app:layout_constraintTop_toTopOf="@+id/imgRatingInFav" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

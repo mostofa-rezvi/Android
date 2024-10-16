@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".Fragment.ProfileFragment">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="74dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_left" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/profileedittextshape"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aleo"
+            android:gravity="start"
+            android:text="Name"
+            android:textColor="@color/fontColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:ems="10"
+            android:fontFamily="@font/aleo"
+            android:gravity="start"
+            android:hint="Your name"
+            android:inputType="text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/profileedittextshape"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="41dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aleo"
+            android:gravity="start"
+            android:text="Address"
+            android:textColor="@color/fontColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:ems="10"
+            android:fontFamily="@font/aleo"
+            android:gravity="start"
+            android:hint="Your address for delivery"
+            android:inputType="text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/profileedittextshape"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/aleo"
+        android:gravity="start"
+        android:text="Phone"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:ems="10"
+        android:fontFamily="@font/aleo"
+        android:gravity="start"
+        android:hint="Your phone number"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/profileedittextshape"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aleo"
+            android:gravity="start"
+            android:text="Total"
+            android:textColor="@color/fontColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:ems="10"
+            android:fontFamily="@font/aleo"
+            android:inputType="none"
+            android:hint="$5"
+            android:textAlignment="textEnd"
+            android:textSize="16sp"
+            android:layout_marginEnd="50dp"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/placeOrderButton"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/proceedbutton"
+        android:drawablePadding="12dp"
+        android:elevation="12dp"
+        android:fontFamily="@font/aleo"
+        android:text="Confirm order"
+        android:textAllCaps="false"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
