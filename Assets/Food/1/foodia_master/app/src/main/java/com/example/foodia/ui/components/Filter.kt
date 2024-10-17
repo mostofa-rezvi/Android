@@ -74,9 +74,15 @@ private fun FilterChip(
 ) {
     val (selected, setSelected) = filter.enabled
     val backgroundColor by animateColorAsState(
-        targetValue = if (selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
+        targetValue = if (selected) {
+            MaterialTheme.colorScheme.primary
+        } else
+        {
+            MaterialTheme.colorScheme.surfaceVariant
+        },
         label = "bg color",
     )
+
     val border = Modifier.fadeInGradientBorder(
         showBorder = !selected,
         colors = listOf(Caramel40, primaryLight),
@@ -84,7 +90,12 @@ private fun FilterChip(
     )
 
     val textColor by animateColorAsState(
-        targetValue = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
+        targetValue = if (selected) {
+            MaterialTheme.colorScheme.onPrimary
+        } else
+        {
+            MaterialTheme.colorScheme.onSurface
+        },
         label = "Text color"
     )
     Surface(
@@ -104,7 +115,8 @@ private fun FilterChip(
                 200f,
                 0f
             )
-        } else {
+        } else
+        {
             Modifier.background(Color.Transparent)
         }
         Box(

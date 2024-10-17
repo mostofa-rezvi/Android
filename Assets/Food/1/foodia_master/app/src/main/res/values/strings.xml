@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Foodia</string>
+    <string name="app_name">Food</string>
     <plurals name="cart_order_count">
         <item quantity="one">%1d item</item>
         <item quantity="other">%1d items</item>

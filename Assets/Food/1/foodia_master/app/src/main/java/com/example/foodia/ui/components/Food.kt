@@ -177,6 +177,7 @@ fun HighlightedFood(
     val cardWidthWithPaddingPx = with(LocalDensity.current) {
         cardWidthWithPaddingPx
     }
+
     val scrollProvide = {
         val offsetFromStart = cardWidthWithPaddingPx * rowState.firstVisibleItemIndex
         offsetFromStart + rowState.firstVisibleItemScrollOffset
@@ -186,6 +187,7 @@ fun HighlightedFood(
         0 -> listOf(Orange80, Caramel40, Caramel80, Orange40)
         else -> listOf(Caramel80, Caramel40, Orange40, Orange80)
     }
+
     LazyRow(
         state = rowState,
         modifier = modifier,
@@ -259,6 +261,7 @@ private fun HighlightedFoodItem(
                         .align(Alignment.BottomCenter)
                 )
             }
+
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = foodItem.name,
@@ -267,6 +270,7 @@ private fun HighlightedFoodItem(
                 style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
+
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = foodItem.tagline,
@@ -275,7 +279,6 @@ private fun HighlightedFoodItem(
             )
         }
     }
-
 }
 
 @Composable
@@ -301,17 +304,5 @@ fun FoodImage(
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
     }
-
 }
-
-
-
-
-
-
-
-
-
-

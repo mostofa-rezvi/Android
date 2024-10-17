@@ -12,9 +12,6 @@ data class FoodCollection(
 
 enum class CollectionType { Normal, Highlight }
 
-/**
- * A fake repo
- */
 object FoodRepo {
     fun getFoods(): List<FoodCollection> = snackCollections
     fun getFoodById(snackId: Long) = foodItems.find { it.id == snackId }!!
@@ -24,10 +21,6 @@ object FoodRepo {
     fun getCart() = cart
 
 }
-
-/**
- * Static data
- */
 
 private val tastyTreats = FoodCollection(
     id = 1L,
