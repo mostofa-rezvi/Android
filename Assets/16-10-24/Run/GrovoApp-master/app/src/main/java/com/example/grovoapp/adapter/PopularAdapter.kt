@@ -9,7 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.grovoapp.DetailsActivity
 import com.example.grovoapp.databinding.PopularItemBinding
 
-class PopularAdapter (private val items:List<String>,private val price:List<String>, private val image:List<Int>, private val requireContext: Context): RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
+class PopularAdapter (
+    private val items:List<String>,
+    private val price:List<String>,
+    private val image:List<Int>,
+    private val requireContext: Context
+): RecyclerView.Adapter<PopularAdapter.PopularViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PopularViewHolder{
         return PopularViewHolder(PopularItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))

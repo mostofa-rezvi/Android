@@ -4,7 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.grovoapp.databinding.CartItemBinding
-class CartAdapter (private val cartItems:MutableList<String>, private val CartItemPrice:MutableList<String>, private var CartImage:MutableList<Int>) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
+class CartAdapter (
+    private val cartItems:MutableList<String>,
+    private val CartItemPrice:MutableList<String>,
+    private var CartImage:MutableList<Int>
+) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
     private val itemQuantities = IntArray(cartItems.size){1}
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
