@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:checkableBehavior="single">
+            <item
+                android:icon="@drawable/ic_resturants_icon"
+                android:id="@+id/menu_restaurants"
+                android:title="@string/show_restaurants" />
+            <item
+                android:icon="@drawable/ic_favourate_on"
+                android:id="@+id/menu_favourates"
+                android:title="@string/favourates" />
+            <item
+                android:icon="@drawable/ic_setting"
+                android:id="@+id/munu_settings"
+                android:title="@string/settings"
+                />
+            <item
+                android:icon="@drawable/ic_logout"
+                android:id="@+id/menu_logout"
+                android:title="@string/logout" />
+
+
+        </group>
+
+</menu>
