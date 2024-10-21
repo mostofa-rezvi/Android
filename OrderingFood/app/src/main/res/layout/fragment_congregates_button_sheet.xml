@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CongregatesButtonSheet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations \n Your Order Plased"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_24ssp"
+        android:fontFamily="@font/yeonysung_regular"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_240sdp"
+        android:src="@drawable/congratulation"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goHomeButton"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/gohomeshape"
+        android:layout_marginTop="@dimen/_380sdp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/lato_black"
+        android:textSize="@dimen/_18ssp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

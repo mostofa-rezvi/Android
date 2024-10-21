@@ -21,5 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         bottomnav.setupWithNavController(NavController)
 
+        binding.notificationBell.setOnClickListener {
+            val bottomSheetDialog = Notification_Botton_Fragment()
+            bottomSheetDialog.show(supportFragmentManager, "Test")
+        }
     }
 }
