@@ -56,4 +56,5 @@ dependencies {
     implementation ("com.intuit.ssp:ssp-android:1.1.1")
 
     implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
 }
