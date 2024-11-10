@@ -33,12 +33,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/proceedButton"
-        android:background="@drawable/proceedbutonshape"
+        android:background="@drawable/profileedittextshape"
         android:layout_width="@dimen/_270sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginBottom="@dimen/_24sdp"
         android:textAllCaps="false"
-        android:text="Proceed"
+        android:text="Checkout"
         android:fontFamily="@font/yeonysung_regular"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintBottom_toBottomOf="parent"

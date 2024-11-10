@@ -1,9 +1,11 @@
 package com.food.orderingfood.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.food.orderingfood.DetailsActivity
 import com.food.orderingfood.databinding.PopularItemBinding
 
 class PopularAdapter(
@@ -23,12 +25,12 @@ class PopularAdapter(
         val price = price[position]
         holder.bind(item,price,images)
 
-//        holder.itemView.setOnClickListener{
-//            val intent = Intent (requireContext, DetailsActivity::class.java)
-//            intent.putExtra("MenuItemName", item)
-//            intent.putExtra("MenuItemImage", images)
-//            requireContext.startActivity(intent)
-//        }
+        holder.itemView.setOnClickListener{
+            val intent = Intent (requireContext, DetailsActivity::class.java)
+            intent.putExtra("MenuItemName", item)
+            intent.putExtra("MenuItemImage", images)
+            requireContext.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

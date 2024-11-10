@@ -1,9 +1,11 @@
 package com.food.orderingfood.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.food.orderingfood.DetailsActivity
 import com.food.orderingfood.databinding.MenuItemBinding
 
 class MenuAdapter (
@@ -30,22 +32,22 @@ class MenuAdapter (
 
     inner class MenuViewHolder(private val binding: MenuItemBinding): RecyclerView.ViewHolder(binding.root){
 
-//        init {
-//            binding.root.setOnClickListener{
-//
-//                val position = adapterPosition
-//
-//                if (position != RecyclerView.NO_POSITION){
-//                    itemClickListener?.onItemClick(position)
-//
-//                    val intent = Intent(requireContext, DetailsActivity::class.java)
-//
-//                    intent.putExtra("MenuItemName", menuItemsName.get(position))
-//                    intent.putExtra("MenuItemImage", menuImage.get(position))
-//                    requireContext.startActivity(intent)
-//                }
-//            }
-//        }
+        init {
+            binding.root.setOnClickListener{
+
+                val position = adapterPosition
+
+                if (position != RecyclerView.NO_POSITION){
+                    itemClickListener?.onItemClick(position)
+
+                    val intent = Intent(requireContext, DetailsActivity::class.java)
+
+                    intent.putExtra("MenuItemName", menuItemsName.get(position))
+                    intent.putExtra("MenuItemImage", menuItemImage.get(position))
+                    requireContext.startActivity(intent)
+                }
+            }
+        }
 
         fun bind(position: Int){
             binding.apply{

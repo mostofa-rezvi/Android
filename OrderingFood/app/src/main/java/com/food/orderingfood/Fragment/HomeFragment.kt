@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
-import com.food.orderingfood.MenuBottomSheetFragment
 import com.food.orderingfood.R
 import com.food.orderingfood.adapter.PopularAdapter
 import com.food.orderingfood.databinding.FragmentHomeBinding

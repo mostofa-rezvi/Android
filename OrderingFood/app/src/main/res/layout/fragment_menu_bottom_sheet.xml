@@ -6,19 +6,20 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/white"
-    tools:context=".MenuBottomSheetFragment">
+    tools:context=".Fragment.MenuBottomSheetFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="@dimen/_25sdp"
-        android:layout_height="@dimen/_25sdp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_gravity="start"
         android:layout_marginLeft="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_8sdp"
         android:background="@android:color/transparent"
-        android:src="@drawable/arrow_left" />
+        android:src="@drawable/arrow_left"
+        android:contentDescription="Back button"/>
 
     <TextView
         android:layout_marginTop="@dimen/_8sdp"
